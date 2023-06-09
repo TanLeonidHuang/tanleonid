@@ -25,6 +25,7 @@ body {
     font-family: Overpass;
     background-color: #f2f2f2;
     background-image: url('../src/background.jpg');
+    background-repeat: no-repeat;
     line-height: 1.6;
     display: flex;
     justify-content: center;
