@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="css/stylesheet.css">
+    <link rel="stylesheet" href="css/projects.css">
+</head>
+<body>
+    <div class="iphone-container">
+        <div class="screen">
+            <div class="clock" id="clock"></div>
+            <a href="about.html" class="app-button">
+                <img src="src/apple-music.png" alt="About Icon">
+            </a>
+            <a href="index.html" class="app-button">
+                <img src="src/home.png" alt="Projects Icon">
+            </a>
+        </div>
+    </div>
+    <script>
+        // Function to update the clock with the current time
+        function updateClock() {
+            var clockElement = document.getElementById('clock');
+            var currentTime = new Date();
+            var hours = currentTime.getHours();
+            var minutes = currentTime.getMinutes();
+            var seconds = currentTime.getSeconds();
+
+            // Pad single-digit hours, minutes, and seconds with leading zeros
+            hours = (hours < 10 ? '0' + hours : hours);
+            hours = (hours>10 ? (hours - 12) : hours);
+            minutes = (minutes < 10 ? '0' + minutes : minutes);
+            seconds = (seconds < 10 ? '0' + seconds : seconds);
+
+            // Set the content of the clock element
+            clockElement.textContent = hours + ':' + minutes;
+
+            // Schedule the next update
+            setTimeout(updateClock, 1000);
+        }
+
+        // Start the clock
+        updateClock();
+    </script>
+</body>
+</html> 

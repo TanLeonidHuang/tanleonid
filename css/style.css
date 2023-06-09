@@ -1,0 +1,259 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+@font-face {
+    font-family: Lobster;
+    src: url("../src/Lobster-Regular.ttf")
+}
+
+@font-face {
+    font-family: Abril;
+    src: url("../src/AbrilFatface-Regular.ttf")
+}
+
+@font-face {
+    font-family: Overpass;
+    src: url("../src/Overpass-Medium.ttf")
+}
+
+
+  
+body {
+    font-family: Overpass;
+    background-color: #f2f2f2;
+    background-image: url('../src/background.jpg');
+    line-height: 1.6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+  
+[data-bg-color=-app-color-1] {
+    background-color: #D0EDFF;
+}
+  
+[data-bg-color=-app-color-2] {
+    background-color: #acb4f3;
+}
+  
+[data-bg-color=-app-color-3] {
+    background-color: #fde74c;
+}
+  
+[data-bg-color=-app-color-4] {
+    background-color: #C5D2EF;
+}
+  
+[data-bg-color=-app-color-5] {
+    background-color: #A9BFF1;
+}
+  
+[data-bg-color=-app-color-6] {
+    background-color: #9381ff;
+}
+
+.Overpass {
+    font-family: Overpass;
+}
+  
+.clock {
+    position: absolute;
+    margin-right:13%;
+    width: 100%;
+    text-align:right;
+    top: 6px;
+    font-size: 30px;
+    font-weight: bold;
+    font-family: Overpass;
+    opacity: 0.9;
+    color: #fff;
+}
+  
+.iphone-container {
+    position: relative;
+    width: 400px;
+    height: 800px;
+    background-color: #000;
+    border-radius: 25px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+  
+.screen {
+    position: absolute;
+    float: left;
+    background-image: url('../src/jLNArM.png');
+    animation: fade-in 0s ease-in forwards;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    background-color: #fff;
+    border-radius: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: flex-start;
+    gap: 20px;
+    padding: 20px;
+    animation: fade-in 4s ease-in forwards;
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+    50% {
+
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.welcome-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 30px;
+    font-weight: bold;
+    color: #fff;
+    text-align: center;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    animation: fade-in-text 2s ease-in-out forwards;
+}
+
+@keyframes fade-in-text {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.gesture-bar {
+    position: absolute;
+    bottom: 10px;
+    left: 150px;
+    right: 150px;
+    height: 4px;
+    background-color: #fff;
+    transition: left 0.25s ease-in, right 0.25s ease-in;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    border-radius: 10px
+
+}
+
+.gesture-bar:hover {
+    left: 145px;
+    right: 145px;
+    transition: left 0.25s ease-in, right 0.25s ease-in;
+    cursor: pointer;
+}
+
+
+  
+.o-apps {
+    display: flex;
+    margin-bottom: -30px;
+    width: 390px;
+    flex-wrap: wrap;
+    transform: scale(1);
+    transition: transform 0.3s ease-in-out;
+    position: relative;
+    align-content: center;
+    top: 25px;
+}
+.o-apps > * {
+    margin: 0 15px 30px;
+}
+.-app-open .o-apps {
+    transform: scale(0.8);
+}
+  
+.c-app__holder {
+    display: none;
+}
+  
+.c-app__tile {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+    flex-direction: column;
+    color: #fff;
+    text-decoration: none;
+    margin-left: 35%;
+    top: 20%;
+}
+
+.c-app__tile:hover {
+    cursor: pointer;
+}
+  
+  
+.c-app-container {
+    visibility: hidden;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform-origin: top left;
+    width: 100%;
+    min-height: 100vh;
+    border: 5px;
+    /*
+    &__content{
+        background:red;
+        min-height:100vh;
+        transition:opacity .15s linear 0s;
+  
+        .-app-open &{
+            opacity:1;
+        }
+    }
+    */
+}
+.c-app-container__inner {
+    color: #fff;
+    padding: 50px;
+    opacity: 0;
+    transition: opacity 0.15s linear 0s;
+}
+.-app-open .c-app-container__inner {
+    opacity: 1;
+    transition: opacity 0.15s linear 0.15s;
+}
+.c-app-container__header {
+    display: flex;
+    justify-content: space-between;
+    padding: 24px 0;
+}
+.c-app-container__dismiss {
+    font-size: 24px;
+}
+.c-app-container__dismiss > * {
+    pointer-events: none;
+}
+.-app-open .c-app-container {
+    visibility: visible;
+    transition: transform 0.3s ease-in-out 0s, visibility 0s linear 0s;
+}
+.-app-close .c-app-container {
+    visibility: hidden;
+    transition: transform 0.3s ease-in-out 0s, visibility 0s linear 0.3s;
+}
