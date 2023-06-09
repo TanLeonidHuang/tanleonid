@@ -58,15 +58,29 @@ body {
 
 .Overpass {
     font-family: Overpass;
+    color: black;
+}
+
+.name {
+    position: absolute;
+    margin-left: 9%;
+    width: 100%;
+    text-align: left;
+    top: 6px;
+    font-size: 13px;
+    font-weight: bold;
+    font-family: Overpass;
+    opacity: 0.9;
+    color: #fff;
 }
   
 .clock {
     position: absolute;
-    margin-right:13%;
+    margin-right:10%;
     width: 100%;
     text-align:right;
     top: 6px;
-    font-size: 30px;
+    font-size: 13px;
     font-weight: bold;
     font-family: Overpass;
     opacity: 0.9;
@@ -81,18 +95,46 @@ body {
     border-radius: 25px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
 }
+
+.power-button,
+.volume-button {
+    position: absolute;
+    transform: translateY(-50%);
+    border-radius: 10px;
+    background-color: orange;
+    width: 3px;
+}
+
+.power-button {
+    right: -3px;
+    top: 20%;
+    height: 30px;
+}
+
+.power-button:hover{
+    cursor: pointer;
+}
+
+.volume-button {
+    top: 30%;
+    right: -3px;
+    height: 75px;
+    background-color: grey;
+}
+
+
   
 .screen {
     position: absolute;
     float: left;
     background-image: url('../src/jLNArM.png');
-    animation: fade-in 0s ease-in forwards;
     top: 10px;
     left: 10px;
     right: 10px;
     bottom: 10px;
     background-color: #fff;
     border-radius: 20px;
+    border: 0.5px solid rgba(192,192,192,0.5);
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -169,6 +211,7 @@ body {
   
 .o-apps {
     display: flex;
+    position:absolute;
     margin-bottom: -30px;
     width: 390px;
     flex-wrap: wrap;
@@ -188,6 +231,9 @@ body {
 .c-app__holder {
     display: none;
 }
+.container {
+    height:1000px;
+}
   
 .c-app__tile {
     position: relative;
@@ -195,7 +241,6 @@ body {
     height: 100px;
     border-radius: 10px;
     flex-direction: column;
-    color: #fff;
     text-decoration: none;
     margin-left: 35%;
     top: 20%;
@@ -229,12 +274,14 @@ body {
     */
 }
 .c-app-container__inner {
-    color: #fff;
+    color: black;
+    height:auto;
     padding: 50px;
     opacity: 0;
     transition: opacity 0.15s linear 0s;
 }
 .-app-open .c-app-container__inner {
+    height:750px;
     opacity: 1;
     transition: opacity 0.15s linear 0.15s;
 }
@@ -256,4 +303,8 @@ body {
 .-app-close .c-app-container {
     visibility: hidden;
     transition: transform 0.3s ease-in-out 0s, visibility 0s linear 0.3s;
+}
+
+object{
+    height: 100%;
 }
