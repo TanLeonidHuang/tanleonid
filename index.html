@@ -12,11 +12,11 @@
 <body>
 <!-- partial:index.partial.html -->
 <div class="iphone-container">
-	<div class="power-button" onclick="window.location.href='tanleonidhuang.github.io/tanleonid-website/'"></div>
+	<div class="power-button" onclick="window.location.href='tanleonidhuang.github.io'"></div>
 	<div class="volume-button"></div>
 	<div class="welcome-text">Welcome</div>
 	<div class="screen">
-		<div class="name">Portfolio</div>
+		<div class="name">Tan's Portfolio</div>
         <div class="clock" id="clock"></div>
 		<div class="o-apps">
 			<div class="c-app__tile" data-bg-color="-app-color-1"></div>
@@ -27,7 +27,7 @@
 
 		<div class="c-app-container">
 			<div class="container">
-				<div class="c-app-container__inner">
+				<div class="c-app-container__inner"  style="overflow-y: scroll;">
 					<div class="c-app-container__header">
 						<h1 class="c-app-container__title"></h1>
 						<button class="c-app-container__dismiss" type="button">
@@ -48,12 +48,20 @@
 	<div class="c-app -app-1">
 		<h1 class="c-app__title">About Me</h1>
 		<div class="c-app__body">
-			<p class="Overpass"><strong>Hey! I'm Tan.</strong> Welcome to my personal website! A little bit about myself -> I'm a student at the University of Toronto sepcializing in Finance and Economics with a CS and Environmental Economics minor.
+			<img src="src/recent.jpg" height="300" width="300" class="center">
+			<p class="Overpass"><br><strong>Hey! I'm Tan.</strong> Welcome to my personal website! A little bit about myself -> I'm a student at the University of Toronto sepcializing in Finance and Economics with a CS and Environmental Economics minor.
 				Evident by my degree, I love thinking about economics, especially concerning differences between economic systems and how non-economic factors play a significant role in the development/growth of an economic syste. 
 				I also particularly enjoy working with financial derivatives, or really anything that involves reducing risk in a portfolio. 
 			</p>
-			<p class="Overpass">Lastly, I love ideating, designing, and developing software projects. </p>
-		</div>
+			<p class="Overpass">I love ideating and developing projects which pushed me to pursue a computer science minor in my second year. Since then I've had countless ideas that I've wanted to develop,
+				usually trying to develop as much as I can during the last couple summers. I'm currently working on two projects, a waitlist style emergency room and clinic app, a simple game engine, and another 
+				website. </p>
+			<p class="Overpass">Besides my professional life, I spend my day-to-day free time playing games, going to the gym, or grabbing dinner with a friend. I usually use my longer breaks to
+				go back to Vancouver and spend time with my family.
+			</p>
+			<img src="src/hiking.jpg" height="200" width="200" class="column">
+			<img src="src/family.jpg" height="300" width="300" class="column">
+			<img src="src/gym.jpg" height="200" width="200" class="column">	
 	</div>
 
 <div class="c-app__holder">
@@ -68,7 +76,7 @@
 			<p class="Overpass"><strong>Application of Machine Learning in Finance -></strong>
 				This course involved learning the basics of Machine Learning, using different ML methods on multiple datasets. I studied supervised learning, regressions, gradient descent algorithms, neural networks, decision trees,
 				unsupervised learning, clustering, k-means algorithm, dimesnion reduction, data cleaning, reinforcement learning, and many case studies relating to the effectiveness of ML. The assignments involved hands on development of ML using keras and TensorFlow which can be found on my GitHub page. I also
-				attended Quantum Computing panel events with the CEO/Technical leads of reknown Quantum Computing companies and studied QC for a presentation about the potential effects of QC on machine learning
+				attended Quantum Computing panel events with the CEO/Technical leads of reknown Quantum Computing companies and studied QC for a presentation about the potential effects of QC on machine learning.
 			</p>
 			<p class="Overpass"><strong>Software Design -></strong>
 				Learned and practiced proper clean architecture in larger codebases. I worked in a team of 5 to develop a project in Java. The project involved the use of clean architecture design patterns, including factories, singleton, composite, facade, and adapter. Abstraction and SOLID were the most important
@@ -106,6 +114,7 @@
 <!-- partial -->
   <script  src="js/script.js"></script>
   <script src="js/clock_script.js"></script>
+  <script src="js/swipe.js"></script>
 
 </body>
 </html>
