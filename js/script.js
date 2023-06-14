@@ -52,7 +52,7 @@
 			$appContainer.removeEventListener('transitionend',resetApp);
 		}
 	}
-	
+
 	document.addEventListener('click', function(e) {
 		var matches = e.target.matches('.c-app__tile');
         if( matches) {
