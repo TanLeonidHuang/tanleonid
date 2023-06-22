@@ -76,6 +76,20 @@ body {
     color: #fff;
 }
 
+.contact{
+    position: absolute;
+    bottom: 10px;
+    right: 2px;
+    max-height: 70px;
+}
+
+.contact-icon{
+    max-height: 25px;
+    max-width: 25px;
+    padding: 2px;
+    border-radius: 5px;
+}
+
 .center {
     display: block;
     margin-left: auto;
