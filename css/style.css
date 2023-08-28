@@ -6,17 +6,17 @@
 
 @font-face {
     font-family: Lobster;
-    src: url("../src/Lobster-Regular.ttf")
+    src: url("../src/Lobster-Regular.ttf");
 }
 
 @font-face {
     font-family: Abril;
-    src: url("../src/AbrilFatface-Regular.ttf")
+    src: url("../src/AbrilFatface-Regular.ttf");
 }
 
 @font-face {
     font-family: Overpass;
-    src: url("../src/Overpass-Medium.ttf")
+    src: url("../src/Overpass-Medium.ttf");
 }
 
 
@@ -26,6 +26,7 @@ body {
     background-color: #f2f2f2;
     background-image: url('../src/background.jpg');
     background-repeat: no-repeat;
+    background-size: cover;
     line-height: 1.6;
     display: flex;
     justify-content: center;
@@ -80,7 +81,7 @@ body {
     position: absolute;
     bottom: 10px;
     right: 2px;
-    max-height: 70px;
+    height: 50px;
 }
 
 .contact-icon{
@@ -230,7 +231,6 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 20px;
     border-radius: 10px
 
 }
@@ -294,8 +294,9 @@ body {
     left: 0;
     transform-origin: top left;
     width: 100%;
-    min-height: 100vh;
+    height: 100%;
     border: 5px;
+    padding-top: 50px;
     /*
     &__content{
         background:red;
@@ -310,26 +311,25 @@ body {
 }
 .c-app-container__inner {
     color: black;
-    height:auto;
-    padding: 50px;
+    height:900px;
     opacity: 0;
     transition: opacity 0.15s linear 0s;
     -ms-overflow-style: none;
     scrollbar-width: none;
+    padding: 0;
 }
 
 .c-app-container__inner::-webkit-scrollbar {
     display: none;
 }
 .-app-open .c-app-container__inner {
-    height:750px;
+    height:900px;
     opacity: 1;
     transition: opacity 0.15s linear 0.15s;
 }
 .c-app-container__header {
     display: flex;
     justify-content: space-between;
-    padding: 24px 0;
 }
 .c-app-container__dismiss {
     font-size: 24px;
