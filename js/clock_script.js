@@ -7,7 +7,6 @@
 
     // Pad single-digit hours, minutes, and seconds with leading zeros
     hours = (hours < 10 ? '0' + hours : hours);
-    hours = (hours>10 ? (hours - 12) : hours);
     minutes = (minutes < 10 ? '0' + minutes : minutes);
     seconds = (seconds < 10 ? '0' + seconds : seconds);
 
